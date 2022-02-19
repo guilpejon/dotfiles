@@ -51,7 +51,6 @@ asdf plugin add ruby
 
 # Install dev tools
 cargo install bat exa tokei ytop tealdeer grex zoxide git-delta
-brew install diff-so-fancy
 brew install watch
 brew install wget
 brew install wireguard-tools
@@ -61,18 +60,3 @@ brew install --cask ngrok
 brew tap heroku/brew
 brew install heroku
 heroku plugins:install heroku-accounts
-
-# Git config
-git config --global user.name "NAME"
-git config --global user.email "EMAIL"
-git config --global core.editor "lvim"
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-git config --global interactive.diffFilter "diff-so-fancy --patch"
-git config --global rebase.autosquash "true"
-git config --global apply.whitespace "fix"
-git config --global branch.sort "-committerdate"
-git config --global core.excludesfile "~/.gitignore"
-git config --global core.attributesfile "~/.gitattributes"
-# Git aliases
-git config --global alias.a "add"
-git config --global alias.b "branch -v"
