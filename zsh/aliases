@@ -10,6 +10,7 @@ alias deploy='git switch main && git pull origin main && git push heroku main --
 alias sdeploy='git switch release && git pull origin release && git push staging release:main --no-verify'
 
 alias vim='lvim'
+alias :q='exit'
 
 # Git aliases
 alias merge='merge --no-edit'
