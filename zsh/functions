@@ -1,0 +1,7 @@
+function pc() {
+  heroku run rails console --remote heroku
+}
+
+function sc() {
+  heroku run rails console --remote staging
+}
