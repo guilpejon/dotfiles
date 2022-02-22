@@ -57,6 +57,11 @@ brew install wireguard-tools
 brew install gh
 brew install cask
 brew install --cask ngrok
+
 brew tap heroku/brew
 brew install heroku
 heroku plugins:install heroku-accounts
+
+brew install ctags
+alias ctags="`brew --prefix`/bin/ctags"
+alias ctags >> ~/.bashrc
