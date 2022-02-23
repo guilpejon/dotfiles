@@ -57,6 +57,7 @@ brew install wireguard-tools
 brew install gh
 brew install cask
 brew install --cask ngrok
+brew install postgresql
 
 brew tap heroku/brew
 brew install heroku
