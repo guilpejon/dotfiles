@@ -145,6 +145,7 @@ lvim.plugins = {
 --       cmd = "TroubleToggle",
 --     },
 }
+vim.cmd("set tags=.tags")
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
