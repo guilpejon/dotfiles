@@ -139,6 +139,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
     {"craigemery/vim-autotag"},
+    {"f-person/git-blame.nvim"},
 --  {"folke/tokyonight.nvim"},
 --     {
 --       "folke/trouble.nvim",
