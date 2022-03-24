@@ -1,0 +1,20 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "prettier.trailingComma": false,
+  "suggest.maxCompleteItemCount": 20,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  "solargraph.diagnostics": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.checkGemVersion": true
+}
