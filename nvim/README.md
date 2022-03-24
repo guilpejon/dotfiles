@@ -1,6 +1,6 @@
 # Installing
 
-Copy `init.vim` and `coc-settings.json` to `~/.config/nvim/` and copy the folder `lua` in `~/.config/nvim/`.
+Copy `init.vim`, `coc-settings.json` and `lua` folder to `~/.config/nvim/`.
 
 # Dependencies
 
@@ -13,16 +13,17 @@ Copy `init.vim` and `coc-settings.json` to `~/.config/nvim/` and copy the folder
 
 ### Vim plug
 ```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
-### install ag for FZF
+Then, open up `nvim` and run `:PlugInstall`.
+
+### Install ag for FZF
 ```
 brew install the_silver_searcher
 ```
 
-### install markdown-preview
+### Install markdown-preview
 ```
 :call mkdp#util#install()
 ```
