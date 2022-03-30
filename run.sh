@@ -48,6 +48,7 @@ brew install cask
 brew install --cask ngrok
 brew install postgresql
 brew install ansible
+brew install gpg
 
 # Heroku and heroku-accounts to manage multiple heroku accounts
 brew tap heroku/brew
