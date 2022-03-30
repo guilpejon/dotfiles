@@ -47,7 +47,7 @@ brew install gh
 brew install cask
 brew install --cask ngrok
 brew install postgresql
-python3 -m pip install --user ansible
+brew install ansible
 
 # Heroku and heroku-accounts to manage multiple heroku accounts
 brew tap heroku/brew
