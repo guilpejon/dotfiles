@@ -47,11 +47,14 @@ brew install gh
 brew install cask
 brew install --cask ngrok
 brew install postgresql
+python3 -m pip install --user ansible
 
+# Heroku and heroku-accounts to manage multiple heroku accounts
 brew tap heroku/brew
 brew install heroku
 heroku plugins:install heroku-accounts
 
+# Ctags
 brew install ctags
 alias ctags="`brew --prefix`/bin/ctags"
 alias ctags >> ~/.bashrc
