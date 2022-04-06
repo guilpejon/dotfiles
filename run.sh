@@ -50,6 +50,7 @@ brew install postgresql
 brew install ansible
 brew install gpg
 brew install keybase
+brew install tmate
 
 # Heroku and heroku-accounts to manage multiple heroku accounts
 brew tap heroku/brew
