@@ -256,6 +256,10 @@ nnoremap <space> za
 set splitbelow
 set splitright
 
+" Map CTRL+O to 'zoom in split'
+" :q will exit the zoom
+nnoremap <C-O> :tabe %<CR>
+
 " Easy CTRL+W with SHIFT
 nnoremap <S-DOWN> <C-W><C-J>
 nnoremap <S-UP> <C-W><C-K>
