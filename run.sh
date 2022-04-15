@@ -46,6 +46,7 @@ brew install wireguard-tools
 brew install gh
 brew install cask
 brew install --cask ngrok
+brew install redis
 brew install postgresql
 brew install ansible
 brew install gpg
