@@ -9,7 +9,7 @@ eval "$(zoxide init zsh)"
 alias deploy='git switch main && git pull origin main && git push heroku main --no-verify'
 alias sdeploy='git switch release && git pull origin release && git push staging release:main --no-verify'
 
-alias vim='lvim'
+alias vim='nvim'
 alias :q='exit'
 
 alias deploy='git checkout main && git pull origin main && git push heroku main --no-verify'
