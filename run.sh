@@ -44,6 +44,7 @@ brew install watch
 brew install wget
 brew install wireguard-tools
 brew install gh
+brew install flyctl
 brew install cask
 brew install --cask ngrok
 brew install redis
