@@ -4,6 +4,9 @@
 
 call plug#begin("~/.vim/plugged")
 
+" Auto close ruby tags
+Plug 'tpope/vim-endwise'
+
 " Theme
 Plug 'morhetz/gruvbox'
 
