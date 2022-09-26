@@ -10,6 +10,9 @@ Plug 'tpope/vim-endwise'
 " Theme
 Plug 'morhetz/gruvbox'
 
+" Github copilot
+Plug 'github/copilot.vim'
+
 " Change quotes to single quotes and etc
 Plug 'tpope/vim-surround'
 " make . repeat vim-surround commands
@@ -21,6 +24,9 @@ Plug 'tpope/vim-rails'
 
 " Buff explorer
 Plug 'jlanzarotta/bufexplorer'
+
+" Spellcheck dictionary for devs
+Plug 'psliwka/vim-dirtytalk', { 'do': ':DirtytalkUpdate' }
 
 " Auto tag
 Plug 'craigemery/vim-autotag'
@@ -91,10 +97,11 @@ set visualbell               " Use visual bell instead of beeping
 set hidden                   " hide buffers when abandoned instead of unload
 set fileformats=unix,dos,mac " Use Unix as the standard file type
 set magic                    " For regular expressions turn magic on
-set path+=**                 " Directories to search when using gf and friends
+set path+=.**                 " Directories to search when using gf and friends
 set isfname-==               " Remove =, detects filename in var=/foo/bar
 set virtualedit=block        " Position cursor anywhere in visual block
 set synmaxcol=2500           " Don't syntax highlight long lines
+set spelllang=en,pt_BR,programming
 
 " ----------------
 " Tabs and Indents
@@ -259,8 +266,6 @@ nnoremap <space> za
 set splitbelow
 set splitright
 
-" Map CTRL+O to 'zoom in split'
-" :q will exit the zoom
 nnoremap <C-O> :tabe %<CR>
 
 " Easy CTRL+W with SHIFT
@@ -285,17 +290,11 @@ cmap w!! w !sudo tee > /dev/null %
 " <leader>h - Find and replace
 map <leader>h :%s///<left><left>
 
-" bind \ (backward slash) to grep shortcut
-nnoremap \ :Rg<SPACE>
-
 "map Q to something useful, like indenting the file
 noremap Q gg=G
 
 " Map ,, to open last file
 nnoremap <Leader><Leader> <C-^>
-
-" bind K to rip grep word under cursor
-nnoremap K :Rg <C-R><C-W><CR>
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -338,20 +337,29 @@ nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 """""""""""""""""""""""""""""""""junegunn/fzf""""""""""""""""""""""""""""""
-" CTRL+P to search
-" CTRL+T to open it in a new tab
-" CTRL+S to open below (split view)
-" CTRL+T to open to the side (vertical split)
-nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
-" requires silversearcher-ag
-" used to ignore gitignore files
-" let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-let $FZF_DEFAULT_COMMAND = 'rg --files'
+
+" search git files
+nnoremap <silent> <C-p> :Files<CR>
+
+" search git files
+nnoremap <silent> <C-g> :GFiles<CR>
+
+" bind \ (backward slash) to grep shortcut
+nnoremap \ :RG<SPACE>
+
+" bind K to rip grep word under cursor
+nnoremap K :RG <C-R><C-W><CR>
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+" let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 """"""""""""""""""""""""plasticboy/vim-markdown""""""""""""""""""""""""""""
 " Disable header folding
