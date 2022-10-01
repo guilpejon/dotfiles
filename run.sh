@@ -11,15 +11,6 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/guilpejon/.zprofile
 # Install iterm2
 brew install iterm2
 
-# Install lunarvim dependencies
-brew install neovim
-brew install yarn
-brew install npm
-curl https://sh.rustup.rs -sSf | sh
-# Install lunarvim
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-echo "export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH" >> ~/.zshrc
-
 # Install zsh and plugins
 brew install zsh
 mkdir ~/.zsh
@@ -40,6 +31,9 @@ brew install 1password
 
 # Install dev tools
 cargo install bat exa tokei ytop tealdeer grex zoxide git-delta
+brew install neovim
+brew install yarn
+brew install npm
 brew install tree
 brew install watch
 brew install wget
