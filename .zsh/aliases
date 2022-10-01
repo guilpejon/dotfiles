@@ -17,3 +17,4 @@ alias ga='git add -A'
 alias gap='git add -p'
 alias gd='git diff'
 alias gb='git branch -v'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
