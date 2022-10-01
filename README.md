@@ -9,6 +9,8 @@ Clone this repo to your home folder.
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
+After that, open `run.sh` and run the installation commands for the tools that you want to use.
+
 ## iTerm2
 
 ### Configuration
