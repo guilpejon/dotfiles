@@ -9,12 +9,14 @@ Clone this repo to your home folder.
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
-## ZSH
+## zsh
 
 ### Installation
 Add these lines to your `.zshrc`.
 
 ```
+# ~/.zshrc
+
 source ~/.dotfiles/.zsh/functions
 source ~/.dotfiles/.zsh/aliases
 source ~/.dotfiles/.zsh/configurations
@@ -24,15 +26,22 @@ source ~/.dotfiles/.zsh/configurations
 
 ### Installation
 
-- Copy `.config/nvim` to `~/`
-- Run `:PackerSync` to install or update packages
-- `:Mason` to install or update LSPs 
+```
+ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
+```
 
 ### Dependencies
 
 ```
 brew install lua-language-server rg
 npm install -g typescript-language-server typescript
+```
+
+### Useful commands
+
+```
+:PackerSync` - install/update packages
+:Mason - install/update LSPs 
 ```
 
 ### Shortcuts
@@ -86,3 +95,18 @@ gp - peek definition
 gr - rename
 ```
 </details>
+
+## asdf
+
+### Installation
+
+```
+brew install asdf
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+```
+
+Create symlink to configuration file
+
+```
+ln -s ~/.dotfiles/.asdfrc ~/.asdfrc
+```
