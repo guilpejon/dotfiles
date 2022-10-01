@@ -40,6 +40,7 @@ brew install 1password
 
 # Install dev tools
 cargo install bat exa tokei ytop tealdeer grex zoxide git-delta
+brew install tree
 brew install watch
 brew install wget
 brew install wireguard-tools
