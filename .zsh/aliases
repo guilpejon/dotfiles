@@ -1,7 +1,7 @@
 alias vim='nvim'
 alias :q='exit'
 
-alias ls="exa --icons"
+alias ls="exa -l --icons"
 alias cat="bat --style=auto"
 alias top="ytop"
 
