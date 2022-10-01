@@ -9,6 +9,12 @@ Clone this repo to your home folder.
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
+## iTerm2
+
+### Configuration
+
+Add one of the themes from the `iterm/` folder to iTerm2 by following [these steps](https://iterm2colorschemes.com/).
+
 ## zsh
 
 ### Configuration
