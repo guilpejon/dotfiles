@@ -1,7 +1,7 @@
 alias vim='nvim'
 alias :q='exit'
 
-alias ls="exa -l --icons"
+alias ls="exa -la --icons"
 alias cat="bat --style=auto"
 alias top="ytop"
 
@@ -16,4 +16,4 @@ alias gpl='git pull'
 alias ga='git add -A'
 alias gap='git add -p'
 alias gd='git diff'
-alias gb='git b'
+alias gb='git branch -v'
