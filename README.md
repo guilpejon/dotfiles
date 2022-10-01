@@ -71,6 +71,10 @@ sh or <S-LEFT> - move left
 sk or <S-UP> - move up
 sj or <S-DOWN> - move down
 sl or <S-RIGHT> - move right
+<tab-left> - reduce size horizontally
+<tab-right> - increase size horizontally
+<tab-up> - increase size vertically
+<tab-down> - reduce size vertically
 
 # git
 <leader>gb - open blame window

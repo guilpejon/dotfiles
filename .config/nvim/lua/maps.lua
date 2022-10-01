@@ -24,3 +24,14 @@ keymap.set('n', '<S-LEFT>', '<C-w>h')
 keymap.set('n', '<S-UP>', '<C-w>k')
 keymap.set('n', '<S-DOWN>', '<C-w>j')
 keymap.set('n', '<S-RIGHT>', '<C-w>l')
+-- Resize window
+keymap.set('n', '<tab><left>', '<C-w><')
+keymap.set('n', '<tab><right>', '<C-w>>')
+keymap.set('n', '<tab><up>', '<C-w>+')
+keymap.set('n', '<tab><down>', '<C-w>-')
+
+-- Map ,, to open last file
+keymap.set('n', ',,', '<C-^>')
+
+-- Ident file with Q
+keymap.set('n', 'Q', 'gg=G')
