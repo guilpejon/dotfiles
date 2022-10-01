@@ -1,0 +1,19 @@
+function pc() {
+  heroku run rails console --remote heroku
+}
+
+function sc() {
+  heroku run rails console --remote staging
+}
+
+function deploy() {
+  git switch main
+  git pull origin main
+  git push heroku main --no-verify
+}
+
+function sdeploy() {
+  git switch main
+  git pull origin main
+  git push staging main --no-verify
+}

@@ -1,0 +1,19 @@
+alias vim='nvim'
+alias :q='exit'
+
+alias ls="exa --icons"
+alias cat="bat --style=auto"
+alias top="ytop"
+
+eval "$(zoxide init zsh)"
+
+# Git
+alias merge='merge --no-edit'
+alias gs='git status'
+alias gcm='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias ga='git add -A'
+alias gap='git add -p'
+alias gd='git diff'
+alias gb='git b'

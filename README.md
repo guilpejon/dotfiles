@@ -2,6 +2,24 @@
 
 Personalized Dotfiles for MacOS.
 
+## Installation
+
+Clone this repo to your home folder.
+```
+git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
+```
+
+## ZSH
+
+### Installation
+Add these lines to your `.zshrc`.
+
+```
+source ~/.dotfiles/.zsh/functions
+source ~/.dotfiles/.zsh/aliases
+source ~/.dotfiles/.zsh/configurations
+```
+
 ## Neovim
 
 ### Installation
