@@ -49,6 +49,10 @@ brew install gpg
 brew install keybase
 brew install tmate
 
+# install asdf
+brew install asdf
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+
 # Heroku and heroku-accounts to manage multiple heroku accounts
 brew tap heroku/brew
 brew install heroku
