@@ -101,6 +101,16 @@ gd - find definition
 ↳ o - open selected file
 gp - peek definition
 gr - rename
+
+# vim-surround
+cs"' - change text between "" to ''
+cst" - change text between tags (e.g. <div>) to "
+ds" - remove "" surrounding a text
+ysiw] - turns "Hello world!" to "[Hello] World" when cursor is in "Hello"
+ysiw[ - turns "Hello world!" to "[ Hello ] World" when cursor is in "Hello"
+yss) - wraps entire line between (...)
+yss( - wraps entire line between ( ... )
+S<p> - in visual mode (pressing V) wraps entire line between <p></p>
 ```
 </details>
 

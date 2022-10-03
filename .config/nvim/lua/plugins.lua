@@ -69,6 +69,12 @@ packer.startup(function(use)
   -- use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
+  -- cs"'
+  use 'tpope/vim-surround'
+
+  -- repeat plugin map commands with .
+  use 'tpope/vim-repeat'
+
   use {
     'numToStr/Comment.nvim',
     config = function()
