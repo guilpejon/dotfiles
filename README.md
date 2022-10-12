@@ -42,7 +42,7 @@ ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 
 ```
 brew install lua-language-server rg
-npm install -g typescript-language-server typescript
+npm i -g typescript-language-server typescript eslint_d prettier
 ```
 
 ### Useful commands
