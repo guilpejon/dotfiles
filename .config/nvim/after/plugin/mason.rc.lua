@@ -8,7 +8,13 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = { "sumneko_lua", "tailwindcss", "solargraph", "rubocop" },
+  ensure_installed = { 
+    "sumneko_lua",
+    "tailwindcss",
+    "solargraph",
+    "rubocop",
+    "eslint_d"
+  },
 }
 
 require 'lspconfig'.tailwindcss.setup {}
