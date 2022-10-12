@@ -71,9 +71,9 @@ vim.keymap.set("n", "sf", function()
     cwd = telescope_buffer_dir(),
     respect_gitignore = false,
     hidden = true,
-    grouped = true,
-    previewer = false,
-    initial_mode = "normal",
+    -- grouped = true,
+    -- previewer = true,
+    -- initial_mode = "normal",
     layout_config = { height = 40 }
   })
 end)
