@@ -8,10 +8,10 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Package manager
-  use {
-    'svrana/neosolarized.nvim', -- Solarized colorscheme
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
+
+  use "EdenEast/nightfox.nvim" -- Packer
+  vim.cmd("colorscheme nordfox")
+
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
 
   use 'nvim-lualine/lualine.nvim' -- Statusline
