@@ -18,3 +18,10 @@ alias gap='git add -p'
 alias gd='git diff'
 alias gb='git branch -v'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
+
+# Docker
+alias docker-clean=' \
+  docker container prune -f ; \
+  docker image prune -f ; \
+  docker network prune -f ; \
+  docker volume prune -f '

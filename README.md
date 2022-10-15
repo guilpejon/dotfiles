@@ -30,6 +30,15 @@ source ~/.dotfiles/.zsh/aliases
 source ~/.dotfiles/.zsh/configurations
 ```
 
+<details>
+<summary>Configuration commands</summary>
+
+```
+docker-clean - prune network, images, containers and volumes
+```
+
+</details>
+
 ## Neovim
 
 ### Configuration
