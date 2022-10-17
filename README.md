@@ -57,7 +57,7 @@ npm i -g typescript-language-server typescript eslint_d prettier
 ### Useful commands
 
 ```
-:PackerSync` - install/update packages
+:PackerSync - install/update packages
 :Mason - install/update LSPs 
 ```
 
