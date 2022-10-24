@@ -16,14 +16,14 @@ packer.startup(function(use)
 
   use 'nvim-lualine/lualine.nvim' -- Statusline
 
-	use({
-		"hrsh7th/nvim-cmp",
-		requires = {
+  use({
+    "hrsh7th/nvim-cmp",
+    requires = {
       'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
       'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
       'hrsh7th/nvim-cmp', -- Completion
-		},
-	})
+    },
+  })
 
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
@@ -35,22 +35,22 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
-	use({ -- fuzzy finder
-		"nvim-telescope/telescope.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim", -- Common utilities
+  use({ -- fuzzy finder
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim", -- Common utilities
       'nvim-telescope/telescope-file-browser.nvim'
-		},
-	})
+    },
+  })
 
-	use({
-		"neovim/nvim-lspconfig", -- language server protocol
-		requires = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+  use({
+    "neovim/nvim-lspconfig", -- language server protocol
+    requires = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
       'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-		},
-	})
+    },
+  })
 
   use 'glepnir/lspsaga.nvim' -- LSP UIs
 
@@ -78,7 +78,14 @@ packer.startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require('Comment').setup()
+      require('Comment').setup()
+    end
+  }
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup()
     end
   }
 end)
