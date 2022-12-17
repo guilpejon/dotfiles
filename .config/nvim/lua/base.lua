@@ -5,7 +5,10 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 -- persistent undo
-vim.bo.undofile=true
+vim.o.undofile=true
+-- vim.o.backup = false
+-- vim.o.writebackup = false
+-- vim.o.swapfile = false
 
 vim.wo.number = true
 
