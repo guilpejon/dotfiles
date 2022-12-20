@@ -68,10 +68,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 <summary> Shortcut List</summary>
 
 ```
-\ - leader
-C-a - select all
-+ - increase next number in line
-- - decrease next number in line
+, - leader
 te - tab edit
 
 # splits
@@ -90,27 +87,20 @@ sl or <S-RIGHT> - move right
 <leader>gb - open blame window
 <leader>go - open file in git repo
 
-# telescope
-;f - find files
-;r - live ripgrep
-\\ - show buffers
-;; - open last option used
-;e - diagnostics
-sf - file browser
-# in file browser window
-q - close
-N - create a new file
-h - go to parent dir
-r - rename file
-d - remove file
-y - copy file
+# nvim-tree
+<leader>p - toggle nvim tree
 
-# lspsaga
-K - hover doc
-gd - find definition
-↳ o - open selected file
-gp - peek definition
-gr - rename
+# telescope
+<C-p> - search git files
+sf - search all files
+sr - live ripgrep
+\\ - show buffers
+<leader>e - diagnostics
+<leader>t - help tags
+
+# comment
+gcc - comment line
+gc (in visual mode selection) - comment block
 
 # vim-surround
 cs"' - change text between "" to ''
@@ -121,7 +111,26 @@ ysiw[ - turns "Hello world!" to "[ Hello ] World" when cursor is in "Hello"
 yss) - wraps entire line between (...)
 yss( - wraps entire line between ( ... )
 S<p> - in visual mode (pressing V) wraps entire line between <p></p>
+
+# LSPs
+gd - go to definition
+K - hover definition
+<leader>vws
+<leader>vd
+[d - go to next diagnostics
+]d - go to previous diagnostics
+<leader>vca 
+<leader>vrr
+<leader>vrn - rename word underneath cursor
+<C-h> - 
+# in autocomplete popup
+<C-p> - previous item 
+<C-n> - next item
+<C-y> - confirm choice
+<C-space> - mapping complete
+
 ```
+
 </details>
 
 ## asdf
