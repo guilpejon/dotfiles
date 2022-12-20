@@ -26,3 +26,10 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+local has = vim.fn.has
+local is_mac = has "macunix"
+
+if is_mac then
+  vim.opt.clipboard:append { 'unnamedplus' }
+end
