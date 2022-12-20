@@ -129,6 +129,9 @@ K - hover definition
 <C-y> - confirm choice
 <C-space> - mapping complete
 
+# zenmode
+<leader>zz - toggle zenmode
+
 ```
 
 </details>
