@@ -6,7 +6,13 @@ require 'nvim-treesitter.configs'.setup {
     "typescript",
     "c",
     "lua",
-    "rust"
+    "rust",
+    "python",
+    "ruby",
+    "html",
+    "css",
+    "json",
+    "yaml"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
