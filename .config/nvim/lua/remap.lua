@@ -20,7 +20,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- disable Q
-vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "Q", "=ap")
 
 -- format with lsp
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
