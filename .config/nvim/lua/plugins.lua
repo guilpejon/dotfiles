@@ -23,9 +23,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- syntax highlighting
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-
   -- lsp default plugins from lsp-zero
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -55,8 +52,6 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- Statusline
 
   use 'windwp/nvim-autopairs' -- autoclose brackets and parenthesis
-
-  use 'windwp/nvim-ts-autotag' -- auto close html tags
 
   use 'norcalli/nvim-colorizer.lua' -- translate hex to colors
 
