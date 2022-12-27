@@ -74,4 +74,6 @@ return require('packer').startup(function(use)
   }
 
   use "folke/zen-mode.nvim"
+
+  use "szw/vim-maximizer"
 end)
