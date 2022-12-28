@@ -90,6 +90,10 @@ sl or <S-RIGHT> - move right
 # nvim-tree
 <leader>p - toggle nvim tree
 
+# ReplaceWithRegister
+grr - replace entire line without losing buffer
+gr (visual mode) - replace selection without losing buffer
+
 # telescope
 <C-p> - search git files
 sf - search all files

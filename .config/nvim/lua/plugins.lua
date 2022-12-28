@@ -73,7 +73,11 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- focus on a single panel
   use "folke/zen-mode.nvim"
 
+  -- window maximizer
   use "szw/vim-maximizer"
+
+  use "vim-scripts/ReplaceWithRegister"
 end)
