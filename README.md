@@ -89,6 +89,8 @@ sl or <S-RIGHT> - move right
 
 # nvim-tree
 <leader>p - toggle nvim tree
+<leader>v - open nvim tree with cursor on current file
+<leader>x - collapse nvim-tree recursively
 
 # ReplaceWithRegister
 grr - replace entire line without losing buffer
