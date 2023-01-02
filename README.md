@@ -138,6 +138,24 @@ K - hover definition
 # zenmode
 <leader>zz - toggle zenmode
 
+# vim-unimpaired
+]q - :cnext
+[q - :cprevious
+]a - :next
+[b - :bprevious
+[<Space> - add newline before the cursor line 
+]<Space> add newlines after the cursor line 
+[e - exchange the current line with the one above 
+]e - exchange the current line with the one below
+[os - :set spell 
+]os - :set nospell
+yos - :set invspell
+[x - encode XML
+]x decode XML (and HTML)
+[u - encode URLs 
+]u decode URLs
+[f - go to next file in the directory
+]f - go to the previous file in the directory
 ```
 
 </details>

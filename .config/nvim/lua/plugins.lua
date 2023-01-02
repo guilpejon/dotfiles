@@ -80,4 +80,7 @@ return require('packer').startup(function(use)
   use "szw/vim-maximizer"
 
   use "vim-scripts/ReplaceWithRegister"
+
+  -- useful mappings 
+  use "tpope/vim-unimpaired"
 end)
