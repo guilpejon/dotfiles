@@ -13,6 +13,8 @@ After that, open `run.sh` and run the installation commands for the tools that y
 
 ## iTerm2
 
+Use [this article](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x) to configure word jumps wih arrow keys.
+
 ### Configuration
 
 Add one of the themes from the `iterm/` folder to iTerm2 by following [these steps](https://iterm2colorschemes.com/).
