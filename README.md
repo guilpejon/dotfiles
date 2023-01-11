@@ -16,6 +16,9 @@ After that, open `run.sh` and run the installation commands for the tools that y
 ### Configuration
 
 Add one of the themes from the `iterm/` folder to iTerm2 by following [these steps](https://iterm2colorschemes.com/).
+```
+“Command” + “Shift” + “.” - show hidden folders in finder
+```
 
 ## zsh
 
