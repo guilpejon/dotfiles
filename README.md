@@ -181,5 +181,7 @@ Create symlink to configuration files.
 
 ```
 ln -s ~/.dotfiles/.gitignore ~/.gitignore
+
+# IMPORTANT: Remember to add your name and email to the ~/.gitconfig file
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
