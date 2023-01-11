@@ -33,6 +33,7 @@ brew install whatsapp
 brew install 1password
 
 # Install dev tools
+curl https://sh.rustup.rs -sSf | sh # install cargo
 cargo install bat exa tokei ytop tealdeer grex zoxide git-delta
 brew install neovim
 brew install yarn
