@@ -1,0 +1,28 @@
+# This is Git's per-user configuration file.
+[user]
+	name = <YOUR NAME>
+	email = <YOUR EMAIL>
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+	pager = delta
+[rebase]
+	autosquash = true
+[apply]
+	whitespace = fix
+[branch]
+	sort = -committerdate
+[pull]
+	ff = only
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	theme = DarkNeon
+	line-numbers = true
+	side-by-side = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
