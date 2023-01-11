@@ -35,18 +35,20 @@ source ~/.dotfiles/.zsh/configurations
 
 ## Neovim
 
-### Configuration
+### Installation
 
-```
-ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
-```
-
-### Dependencies
+Install [Packer](https://github.com/wbthomason/packer.nvim), [rg](https://github.com/BurntSushi/ripgrep), linters and lsps.
 
 ```
 brew install lua-language-server rg
 npm i -g typescript-language-server typescript eslint_d prettier
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+### Configuration
+
+```
+ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 ```
 
 ### Useful commands
