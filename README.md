@@ -23,7 +23,7 @@ Add one of the themes from the `iterm/` folder to iTerm2 by following [these ste
 ## zsh
 
 ### Configuration
-Add these lines to your `.zshrc`.
+Add these lines to your `~/.zshrc`.
 
 ```
 # ~/.zshrc
@@ -32,15 +32,6 @@ source ~/.dotfiles/.zsh/functions
 source ~/.dotfiles/.zsh/aliases
 source ~/.dotfiles/.zsh/configurations
 ```
-
-<details>
-<summary>Configuration commands</summary>
-
-```
-docker-clean - prune network, images, containers and volumes
-```
-
-</details>
 
 ## Neovim
 
