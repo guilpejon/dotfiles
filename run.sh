@@ -11,6 +11,9 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/guilpejon/.zprofile
 # Install iterm2
 brew install iterm2
 
+# Enable keystroke repetition while holding a key
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Install zsh and plugins
 brew install zsh
 mkdir ~/.zsh
