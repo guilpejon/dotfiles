@@ -93,6 +93,19 @@ sl or <S-RIGHT> - move right
 <leader>p - toggle nvim tree
 <leader>v - open nvim tree with cursor on current file
 <leader>x - collapse nvim-tree recursively
+# in nvim-tree
+g? - help
+u - go up a directory
+I - toggle git ignored files
+H - toggle dotfiles
+R - refresh
+x - cut file/folder
+p - paste file/folder
+a - add file
+d - remove
+r - rename
+<C-v> - vsplit
+<C-x> - split
 
 # ReplaceWithRegister
 grr - replace entire line without losing buffer
