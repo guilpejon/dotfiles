@@ -83,4 +83,7 @@ return require('packer').startup(function(use)
 
   -- useful mappings 
   use "tpope/vim-unimpaired"
+
+  -- just for fun
+  use 'eandrju/cellular-automaton.nvim'
 end)

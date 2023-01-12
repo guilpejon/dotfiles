@@ -158,6 +158,9 @@ yos - :set invspell
 ]u decode URLs
 [f - go to next file in the directory
 ]f - go to the previous file in the directory
+
+# cellular-automaton
+<leader>fml - make it rain
 ```
 
 </details>
