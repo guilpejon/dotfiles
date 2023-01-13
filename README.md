@@ -13,6 +13,9 @@ After that, open `run.sh` and run the installation commands for the tools that y
 
 ## iTerm2
 
+<details>
+<summary>Expand</summary>
+
 Use [this article](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x) to configure word jumps wih arrow keys.
 
 Set "Reuse previous session's directory" in "Working Directory".
@@ -25,8 +28,12 @@ Add one of the themes from the `iterm/` folder to iTerm2 by following [these ste
 ```
 “Command” + “Shift” + “.” - show hidden folders in finder
 ```
+</details>
 
 ## zsh
+
+<details>
+<summary>Expand</summary>
 
 ### Configuration
 Add these lines to your `~/.zshrc`.
@@ -39,7 +46,12 @@ source ~/.dotfiles/.zsh/aliases
 source ~/.dotfiles/.zsh/configurations
 ```
 
+</details>
+
 ## Neovim
+
+<details>
+<summary>Expand</summary>
 
 ### Installation
 
@@ -67,9 +79,6 @@ ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 ```
 
 ### Shortcuts
-
-<details>
-<summary> Shortcut List</summary>
 
 ```
 , - leader
@@ -187,6 +196,25 @@ yos - :set invspell
 
 ## asdf
 
+<details>
+<summary>Expand</summary>
+
+### Installation
+
+```
+brew install asdf
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+```
+
+#### Plugins
+
+```
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin-add python
+```
+
 ### Configuration
 
 Create symlink to configuration file.
@@ -195,7 +223,12 @@ Create symlink to configuration file.
 ln -s ~/.dotfiles/.asdfrc ~/.asdfrc
 ```
 
+</details>
+
 ## Git
+
+<details>
+<summary>Expand</summary>
 
 ### Configuration
   
@@ -214,3 +247,5 @@ ln -s ~/.dotfiles/.gitignore ~/.gitignore
 # IMPORTANT: Remember to add your name and email to the ~/.gitconfig file
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
+
+</details>
