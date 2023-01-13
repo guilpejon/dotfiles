@@ -4,10 +4,6 @@
 # Intall xcode
 xcode-select --install
 
-# Install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/guilpejon/.zprofile
-
 # Enable keystroke repetition while holding a key
 defaults write -g ApplePressAndHoldEnabled -bool false
 
