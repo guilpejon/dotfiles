@@ -208,8 +208,8 @@ yos - :set invspell
 
 # neural
 <C-n> - autocomplete code
-<C-space> - OpenAI prompt
-<leader>cd - document code
+<leader>n - OpenAI prompt
+<leader>c - document code
 ```
 
 </details>

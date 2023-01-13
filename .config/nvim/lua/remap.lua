@@ -83,5 +83,5 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 -- neural
-keymap.set("n", "<C-space>", ":NeuralPrompt<CR>")
-keymap.set("n", "<leader>cd", ":NeuralCode add documentation<CR>")
+keymap.set("n", "<leader>n", ":NeuralPrompt<CR>")
+keymap.set("n", "<leader>c", ":NeuralCode add documentation<CR>")

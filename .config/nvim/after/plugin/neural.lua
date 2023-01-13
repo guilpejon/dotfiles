@@ -14,7 +14,7 @@ end
 neural.setup({
   mappings = {
     swift = '<C-n>', -- Context completion
-    -- prompt = '<leader-n>', -- Open prompt
+    -- prompt = '<C-space>', -- Open prompt
   },
   -- OpenAI settings
   open_ai = {
@@ -31,7 +31,7 @@ neural.setup({
     use_animated_sign = true, -- Use animated sign mark
     show_hl = true,
     show_icon = true,
-    icon = '🗲', -- Prompt/Static sign icon
+    icon = "", -- Prompt/Static sign icon
     icon_color = '#ffe030', -- Sign icon color
     hl_color = '#4D4839', -- Line highlighting on output
     prompt_border_color = '#E5C07B',
