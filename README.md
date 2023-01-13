@@ -51,6 +51,8 @@ npm i -g typescript-language-server typescript eslint_d prettier
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
+Copy `.config/nvim/.env.example.lua` to `.config/nvim/.env.lua` and add your OpenAI key to make neural work.
+
 ### Configuration
 
 ```
@@ -174,6 +176,11 @@ yos - :set invspell
 
 # cellular-automaton
 <leader>fml - make it rain
+
+# neural
+<C-n> - autocomplete code
+<C-space> - OpenAI prompt
+<leader>cd - document code
 ```
 
 </details>

@@ -80,4 +80,8 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- make it rain
-vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
+keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+-- neural
+keymap.set("n", "<C-space>", ":NeuralPrompt<CR>")
+keymap.set("n", "<leader>cd", ":NeuralCode add documentation<CR>")

@@ -86,4 +86,14 @@ return require('packer').startup(function(use)
 
   -- just for fun
   use 'eandrju/cellular-automaton.nvim'
+
+  -- AI code generation
+  use({
+    'dense-analysis/neural',
+    requires = {
+        'MunifTanjim/nui.nvim',
+        'ElPiloto/significant.nvim'
+    }
+  })
 end)
+
