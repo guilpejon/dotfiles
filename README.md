@@ -147,9 +147,9 @@ Add these lines to your `~/.zshrc`.
 ```
 # ~/.zshrc
 
-source ~/.dotfiles/.zsh/functions
-source ~/.dotfiles/.zsh/aliases
-source ~/.dotfiles/.zsh/configurations
+source ~/.dotfiles/zsh/functions
+source ~/.dotfiles/zsh/aliases
+source ~/.dotfiles/zsh/configurations
 ```
 
 </details>
@@ -182,7 +182,7 @@ Copy `.config/nvim/.env.example.lua` to `.config/nvim/.env.lua` and add your Ope
 ### Configuration
 
 ```
-ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
 ```
 
 ### Shortcuts
@@ -327,7 +327,7 @@ asdf plugin-add python
 Create symlink to configuration file.
 
 ```
-ln -s ~/.dotfiles/.asdfrc ~/.asdfrc
+ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
 ```
 
 </details>
@@ -349,10 +349,10 @@ ssh-add # add key to agent
 Create symlink to configuration files.
 
 ```
-ln -s ~/.dotfiles/.gitignore ~/.gitignore
+ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
 
 # IMPORTANT: Remember to add your name and email to the ~/.gitconfig file
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ```
 
 </details>
