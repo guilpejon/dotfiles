@@ -177,12 +177,20 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias ctags >> ~/.bashrc
 ```
 
-Copy `.config/nvim/.env.example.lua` to `.config/nvim/.env.lua` and add your OpenAI key to make neural work.
-
 ### Configuration
+
+Create a symbolic link with the config folder.
 
 ```
 ln -s ~/.dotfiles/nvim ~/.config/nvim
+```
+
+Copy `nvim/.env.example.lua` to `nvim/.env.lua` and fill the missing values.
+
+```
+cp nvim/.env.example.lua nvim/.env.lua
+
+vim nvim/.env.lua # add the missing values
 ```
 
 ### Shortcuts
