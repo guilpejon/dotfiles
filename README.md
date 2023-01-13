@@ -11,6 +11,20 @@ git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 
 After that, open `run.sh` and run the installation commands for the tools that you want to use and check the sections below on how to install/customize other tools.
 
+## Brew
+
+<details>
+<summary>Expand</summary>
+
+### Installation
+  
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/guilpejon/.zprofile
+``` 
+
+</details>
+
 ## iTerm2
 
 <details>
