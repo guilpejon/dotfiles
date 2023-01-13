@@ -9,20 +9,26 @@ Clone this repo to your home folder.
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
-After that, open `run.sh` and run the installation commands for the tools that you want to use.
+After that, open `run.sh` and run the installation commands for the tools that you want to use and check the sections below on how to install/customize other tools.
 
 ## iTerm2
 
 <details>
 <summary>Expand</summary>
 
+### Installation
+
+```
+brew install iterm2
+```
+
+### Configuration
+
 Use [this article](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x) to configure word jumps wih arrow keys.
 
 Set "Reuse previous session's directory" in "Working Directory".
 
 ![image](https://user-images.githubusercontent.com/871362/211964181-627f0374-c882-4cf3-901a-eba63ffa5d4a.png)
-
-### Configuration
 
 Add one of the themes from the `iterm/` folder to iTerm2 by following [these steps](https://iterm2colorschemes.com/).
 ```
