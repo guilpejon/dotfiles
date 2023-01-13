@@ -5,11 +5,36 @@ Personalized Dotfiles for MacOS.
 ## Installation
 
 Clone this repo to your home folder.
+
 ```
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
-After that, open `run.sh` and run the installation commands for the tools that you want to use and check the sections below on how to install/customize other tools.
+Expand the sections below as you wish to learn how to install and configure them.
+
+## MacOS
+
+<details>
+<summary>Expand</summary>
+
+### Install
+
+Install Rosetta 2 and xcode if this is a new M1 machine.
+
+```
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+
+xcode-select --install
+```
+
+### Configure
+
+```
+# Enable keystroke repetition while holding a key
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+</details>
 
 ## Brew
 
@@ -20,8 +45,55 @@ After that, open `run.sh` and run the installation commands for the tools that y
   
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/guilpejon/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 ``` 
+
+</details>
+
+## Apps
+
+<details>
+<summary>Expand</summary>
+
+```
+brew install slack
+brew install spotify
+brew install notion
+brew install telegram
+brew install whatsapp
+brew install 1password
+```
+
+</details>
+
+## Dev tools
+
+<details>
+<summary>Expand</summary>
+
+```
+curl https://sh.rustup.rs -sSf | sh # install cargo
+cargo install bat exa tokei ytop tealdeer grex zoxide git-delta
+
+brew install yarn
+brew install npm
+brew install tree
+brew install watch
+brew install wget
+brew install wireguard-tools
+brew install gh
+brew install flyctl
+brew install redis
+brew install postgresql
+brew install ansible
+brew install gpg
+brew install keybase
+brew install tmate
+
+brew install cask
+brew install --cask ngrok
+
+```
 
 </details>
 
@@ -55,6 +127,20 @@ Add one of the themes from the `iterm/` folder to iTerm2 by following [these ste
 <details>
 <summary>Expand</summary>
 
+### Installation
+
+Install zsh and a few plugins, including powerlevel10k.
+
+```
+brew install zsh
+mkdir ~/.zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+
+brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
+```
+
 ### Configuration
 Add these lines to your `~/.zshrc`.
 
@@ -75,12 +161,20 @@ source ~/.dotfiles/.zsh/configurations
 
 ### Installation
 
-Install [Packer](https://github.com/wbthomason/packer.nvim), [rg](https://github.com/BurntSushi/ripgrep), linters and lsps.
+```
+brew install neovim
+```
+
+Install [Packer](https://github.com/wbthomason/packer.nvim), [rg](https://github.com/BurntSushi/ripgrep), linters, lsps and ctags.
 
 ```
 brew install lua-language-server rg
 npm i -g typescript-language-server typescript eslint_d prettier
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+brew install ctags
+alias ctags="`brew --prefix`/bin/ctags"
+alias ctags >> ~/.bashrc
 ```
 
 Copy `.config/nvim/.env.example.lua` to `.config/nvim/.env.lua` and add your OpenAI key to make neural work.
@@ -89,13 +183,6 @@ Copy `.config/nvim/.env.example.lua` to `.config/nvim/.env.lua` and add your Ope
 
 ```
 ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
-```
-
-### Useful commands
-
-```
-:PackerSync - install/update packages
-:Mason - install/update LSPs 
 ```
 
 ### Shortcuts
