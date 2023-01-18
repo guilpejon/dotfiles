@@ -152,6 +152,32 @@ source ~/.dotfiles/zsh/aliases
 source ~/.dotfiles/zsh/configurations
 ```
 
+### Shortcuts
+
+```
+merge='merge --no-edit'
+gs='git status'
+gco='git checkout'
+gcm='git commit -m'
+gps='git push'
+gpl='git pull'
+ga='git add -A'
+gap='git add -p'
+gd='git diff'
+gb='git branch -v'
+glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
+
+ls="exa -la --icons"
+cat="bat --style=auto"
+top="ytop"
+
+alias docker-clean=' \
+  docker container prune -f ; \
+  docker image prune -f ; \
+  docker network prune -f ; \
+  docker volume prune -f '
+```
+
 </details>
 
 ## Neovim
