@@ -390,3 +390,18 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ```
 
 </details>
+
+## Rails
+
+<details>
+<summary>Expand</summary>
+
+### Configuration
+
+Create symlink to configuration files.
+
+```
+ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
+```
+
+</details>
