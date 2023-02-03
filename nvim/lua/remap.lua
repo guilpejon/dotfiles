@@ -12,9 +12,6 @@ keymap.set("n", "<leader>b", vim.cmd.Ex)
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- keep cursor on the beginning of the line while using J
-keymap.set("n", "J", "mzJ`z")
-
 -- keep cursor on middle while using C-d and C-u
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
