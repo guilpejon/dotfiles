@@ -285,23 +285,6 @@ yss) - wraps entire line between (...)
 yss( - wraps entire line between ( ... )
 S<p> - in visual mode (pressing V) wraps entire line between <p></p>
 
-# LSPs
-gd - go to definition
-K - hover definition
-<leader>vws
-<leader>vd
-[d - go to next diagnostics
-]d - go to previous diagnostics
-<leader>vca 
-<leader>vrr
-<leader>vrn - rename word underneath cursor
-<C-h> - 
-# in autocomplete popup
-<C-p> - previous item 
-<C-n> - next item
-<C-y> - confirm choice
-<C-space> - mapping complete
-
 # zenmode
 <leader>zz - toggle zenmode
 
