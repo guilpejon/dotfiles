@@ -93,6 +93,8 @@ brew install tmate
 brew install cask
 brew install --cask ngrok
 
+brew install lazygit
+
 ```
 
 </details>
@@ -258,6 +260,9 @@ d - remove
 r - rename
 <C-v> - vsplit
 <C-x> - split
+
+# LazyGit
+<leader>gg - open up lazygit
 
 # ReplaceWithRegister
 grr - replace entire line without losing buffer

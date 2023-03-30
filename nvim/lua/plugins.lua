@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
     }
   }
 
+  use 'kdheepak/lazygit.nvim' -- git helpers inside vim
+
   use 'nvim-lualine/lualine.nvim' -- Statusline
 
   use 'windwp/nvim-autopairs' -- autoclose brackets and parenthesis
