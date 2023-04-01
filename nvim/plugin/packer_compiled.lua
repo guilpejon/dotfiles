@@ -80,55 +80,25 @@ _G.packer_plugins = {
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  LuaSnip = {
+  ReplaceWithRegister = {
     loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
+    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
+    url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
-  ["cmp-buffer"] = {
+  ["cellular-automaton.nvim"] = {
     loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
+    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
+    url = "https://github.com/eandrju/cellular-automaton.nvim"
   },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/git.nvim",
     url = "https://github.com/dinhhuy258/git.nvim"
   },
-  ["lsp-zero.nvim"] = {
+  ["lazygit.nvim"] = {
     loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
+    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -140,16 +110,6 @@ _G.packer_plugins = {
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
-  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
@@ -160,30 +120,20 @@ _G.packer_plugins = {
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
-  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
-  ["nvim-ts-autotag"] = {
+  ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
+    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -210,6 +160,11 @@ _G.packer_plugins = {
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-maximizer"] = {
+    loaded = true,
+    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/vim-maximizer",
+    url = "https://github.com/szw/vim-maximizer"
+  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/vim-repeat",
@@ -219,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-unimpaired"] = {
+    loaded = true,
+    path = "/Users/guilpejon/.local/share/nvim/site/pack/packer/start/vim-unimpaired",
+    url = "https://github.com/tpope/vim-unimpaired"
   },
   ["zen-mode.nvim"] = {
     loaded = true,

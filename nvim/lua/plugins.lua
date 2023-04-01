@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use "EdenEast/nightfox.nvim"
   vim.cmd.colorscheme 'nordfox'
 
+  -- file explorer
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -31,10 +32,12 @@ return require('packer').startup(function(use)
 
   use 'norcalli/nvim-colorizer.lua' -- translate hex to colors
 
+  -- markdown preview
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
+
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'tpope/vim-surround' -- cs"'
@@ -42,6 +45,7 @@ return require('packer').startup(function(use)
   -- repeat plugin map commands with .
   use 'tpope/vim-repeat'
 
+  -- commenting plugin
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -55,20 +59,17 @@ return require('packer').startup(function(use)
   -- window maximizer
   use "szw/vim-maximizer"
 
+  --
   use "vim-scripts/ReplaceWithRegister"
 
   -- useful mappings 
   use "tpope/vim-unimpaired"
 
   -- just for fun
-  use 'eandrju/cellular-automaton.nvim'
-
-  -- AI code generation
-  use({
-    'dense-analysis/neural',
+  use {
+    'eandrju/cellular-automaton.nvim',
     requires = {
-        'MunifTanjim/nui.nvim',
-        'ElPiloto/significant.nvim'
+      'nvim-treesitter/nvim-treesitter'
     }
   })
 end)
