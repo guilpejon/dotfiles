@@ -1,13 +1,15 @@
+eval "$(zoxide init zsh)"
+
+# vim
 alias vim='nvim'
 alias :q='exit'
 
+# rust terminal tools
 alias ls="exa -la --icons"
 alias cat="bat --style=auto"
 alias top="ytop"
 
-eval "$(zoxide init zsh)"
-
-# Git
+# git
 alias merge='merge --no-edit'
 alias gs='git status'
 alias gco='git checkout'
@@ -20,9 +22,14 @@ alias gd='git diff'
 alias gb='git branch -v'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
 
-# Docker
+# docker
 alias docker-clean=' \
   docker container prune -f ; \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
+
+# k8s
+alias k=kubectl
+alias kgp='k get pods'
+alias kdp='k delete pod'

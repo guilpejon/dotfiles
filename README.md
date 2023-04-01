@@ -95,6 +95,8 @@ brew install --cask ngrok
 
 brew install lazygit
 
+# to enable k8s terminal helper functions
+brew install fzf jq
 ```
 
 </details>
@@ -157,6 +159,16 @@ source ~/.dotfiles/zsh/configurations
 ### Shortcuts
 
 ```
+# vim
+vim='nvim'
+:q='exit'
+
+# rust terminal tools
+ls="exa -la --icons"
+cat="bat --style=auto"
+top="ytop"
+
+# git
 merge='merge --no-edit'
 gs='git status'
 gco='git checkout'
@@ -169,15 +181,22 @@ gd='git diff'
 gb='git branch -v'
 glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
 
-ls="exa -la --icons"
-cat="bat --style=auto"
-top="ytop"
-
-alias docker-clean=' \
+# docker
+docker-clean=' \
   docker container prune -f ; \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
+
+# k8s
+k=kubectl
+kgp='k get pods'
+kdp='k delete pod'
+kswitch_ns='kubectl config set-context --current --namespace $(fz_namespace)'
+kswitch_ctx='kubectl config use-context $(fz_context)'
+kshell='kubectl exec $* -it $(fz_podname $*) -- sh'
+kbash='kubectl exec $* -it $(fz_podname $*) -- bash'
+klogs='kubectl logs $* -f $(fz_podname $*)'
 ```
 
 </details>

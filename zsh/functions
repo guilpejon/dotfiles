@@ -1,19 +1,61 @@
-function pc() {
-  heroku run rails console --remote heroku
+#################
+# k8s functions #
+#################
+
+fz_podname() {
+  kubectl get pods $* -o json | jq -r '.items[].metadata.name' | fzf
 }
 
-function sc() {
-  heroku run rails console --remote staging
+fz_deployment() {
+  kubectl get deployments $* -o json | jq -r '.items[].metadata.name' | fzf
 }
 
-function deploy() {
-  git switch main
-  git pull origin main
-  git push heroku main --no-verify
+fz_namespace() {
+  kubectl get ns -o json | jq -r '.items[].metadata.name' | fzf
 }
 
-function sdeploy() {
-  git switch main
-  git pull origin main
-  git push staging main --no-verify
+fz_context() {
+  kubectl config get-contexts -o name 2>/dev/null | fzf
+}
+
+kswitch_ns() {
+  kubectl config set-context --current --namespace $(fz_namespace)
+}
+
+kswitch_ctx() {
+  kubectl config use-context $(fz_context)
+}
+
+kshell() {
+  kubectl exec $* -it $(fz_podname $*) -- sh
+}
+
+kbash() {
+  kubectl exec $* -it $(fz_podname $*) -- bash
+}
+
+klogs() {
+  kubectl logs $* -f $(fz_podname $*)
+}
+
+#################
+# HCP functions #
+#################
+
+prod_console() {
+  aws sso login --profile itpa
+  kubectl config set-context --current --namespace lead-src-1-24
+  kdebug -namespace lead-src-1-24 -source production-scrapes-sidekiq -name guil-debug
+}
+
+test_console() {
+  aws sso login --profile itta
+  kubectl config set-context --current --namespace lead-src-1-24
+  kdebug -namespace lead-src-1-24 -source test-scrapes-sidekiq -name guil-debug
+}
+
+dev_console() {
+  aws sso login --profile itda
+  kubectl config set-context --current --namespace lead-src-1-24
+  kdebug -namespace lead-src-1-24 -source development-scrapes-sidekiq -name guil-debug
 }
