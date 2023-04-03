@@ -291,6 +291,10 @@ gf - easy navigation
 :Rails - runs the current test, spec or feature
 :.Rails - same as above but for the current line only
 
+# vim-bundler
+:Bundle - wraps bundle
+:Bundle open - opens a gem inside vim
+
 # ReplaceWithRegister
 grr - replace entire line without losing buffer
 gr (visual mode) - replace selection without losing buffer
