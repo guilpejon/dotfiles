@@ -72,5 +72,10 @@ return require('packer').startup(function(use)
       'nvim-treesitter/nvim-treesitter'
     }
   })
+  -- bundle helpers
+  use "tpope/vim-bundler"
+
+  -- rails goodies and helpers
+  use "tpope/vim-rails"
 end)
 

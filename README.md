@@ -222,6 +222,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 brew install ctags
 alias ctags="`brew --prefix`/bin/ctags"
 alias ctags >> ~/.bashrc
+
+gem install gem-ctags
+gem ctags # in a rails project folder
 ```
 
 ### Configuration
@@ -274,6 +277,19 @@ r - rename
 
 # LazyGit
 <leader>gg - open up lazygit
+
+# rails.vim
+gf - easy navigation
+:A - alternate files
+:R - go to related files
+:Emodel - go to model
+:Eview - go to view
+:Econtroller - go to controller
+:Rails console - opens up rails console
+:Generate controller foo - generate controller foo
+:Runner - wraps rails runner
+:Rails - runs the current test, spec or feature
+:.Rails - same as above but for the current line only
 
 # ReplaceWithRegister
 grr - replace entire line without losing buffer
