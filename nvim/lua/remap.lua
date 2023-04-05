@@ -2,10 +2,6 @@ vim.g.mapleader = ","
 
 local keymap = vim.keymap
 
----------------------
--- General Keymaps
----------------------
-
 keymap.set("n", "<leader>b", vim.cmd.Ex)
 
 -- move blocks of line up and down
@@ -25,9 +21,6 @@ keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- disable Q
 keymap.set("n", "Q", "=ap")
-
--- format with lsp
-keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- browse through quickfix list (global)
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -65,20 +58,3 @@ keymap.set('n', '<tab><down>', '<C-w>-')
 
 -- Map ,, to open last file
 keymap.set('n', ',,', '<C-^>')
-
-----------------------
--- Plugin Keybinds
-----------------------
-
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
-
--- restart lsp server (not on youtube nvim video)
-keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-
--- make it rain
-keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
-
--- neural
-keymap.set("n", "<leader>n", ":NeuralPrompt<CR>")
-keymap.set("n", "<leader>c", ":NeuralCode add documentation<CR>")

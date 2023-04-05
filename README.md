@@ -345,6 +345,9 @@ yos - :set invspell
 
 # cellular-automaton
 <leader>fml - make it rain
+
+# maximizer
+<leader>sm - toggle split window maximization
 ```
 
 </details>
