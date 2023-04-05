@@ -79,7 +79,11 @@ return require('packer').startup(function(use)
   -- rails goodies and helpers
   use "tpope/vim-rails"
 
-  -- linting
-  use "mfussenegger/nvim-lint"
+  -- basic lsp installation with mason as lsp package manager
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
 end)
 

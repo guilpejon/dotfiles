@@ -307,6 +307,15 @@ sr - live ripgrep
 <leader>e - diagnostics
 <leader>t - help tags
 
+# lspconfig
+[d - go to previous diagnostic
+]d - go to next diagnostic
+<leader>q - add buffer diagnostics to location list
+gd - jumps to definition of symbol under cursor
+K - displays info about symbol under cursor
+<leader>rn - renames all references to symbol under cursor
+<leader>f - format code
+
 # comment
 gcc - comment line
 gc (in visual mode selection) - comment block
