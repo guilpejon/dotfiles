@@ -37,25 +37,3 @@ kbash() {
 klogs() {
   kubectl logs $* -f $(fz_podname $*)
 }
-
-#################
-# HCP functions #
-#################
-
-prod_console() {
-  aws sso login --profile itpa
-  kubectl config set-context --current --namespace lead-src-1-24
-  kdebug -namespace lead-src-1-24 -source production-scrapes-sidekiq -name guil-debug
-}
-
-test_console() {
-  aws sso login --profile itta
-  kubectl config set-context --current --namespace lead-src-1-24
-  kdebug -namespace lead-src-1-24 -source test-scrapes-sidekiq -name guil-debug
-}
-
-dev_console() {
-  aws sso login --profile itda
-  kubectl config set-context --current --namespace lead-src-1-24
-  kdebug -namespace lead-src-1-24 -source development-scrapes-sidekiq -name guil-debug
-}
