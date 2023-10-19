@@ -428,6 +428,7 @@ Create symlink to configuration files.
 
 ```
 ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
+ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
 
 </details>
