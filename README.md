@@ -42,11 +42,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 <summary>Expand</summary>
 
 ### Installation
-  
+
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-``` 
+```
 
 </details>
 
@@ -121,9 +121,11 @@ Set "Reuse previous session's directory" in "Working Directory".
 ![image](https://user-images.githubusercontent.com/871362/211964181-627f0374-c882-4cf3-901a-eba63ffa5d4a.png)
 
 Add one of the themes from the `iterm/` folder to iTerm2 by following [these steps](https://iterm2colorschemes.com/).
+
 ```
 “Command” + “Shift” + “.” - show hidden folders in finder
 ```
+
 </details>
 
 ## zsh
@@ -146,6 +148,7 @@ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.z
 ```
 
 ### Configuration
+
 Add these lines to your `~/.zshrc`.
 
 ```
@@ -212,12 +215,10 @@ klogs='kubectl logs $* -f $(fz_podname $*)'
 brew install neovim
 ```
 
-Install [Packer](https://github.com/wbthomason/packer.nvim), [rg](https://github.com/BurntSushi/ripgrep), linters, lsps and ctags.
+Install [rg](https://github.com/BurntSushi/ripgrep), [fd](https://github.com/sharkdp/fd) linters, lsps and ctags.
 
 ```
-brew install lua-language-server rg
-npm i -g typescript-language-server typescript eslint_d prettier
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+brew install rg fd
 
 brew install ctags
 alias ctags="`brew --prefix`/bin/ctags"
@@ -238,7 +239,7 @@ ln -s ~/.dotfiles/nvim ~/.config/nvim
 ### Shortcuts
 
 ```
-, - leader
+<space> - leader
 te - tab edit
 
 # splits
@@ -254,42 +255,11 @@ sl or <S-RIGHT> - move right
 <tab-down> - reduce size vertically
 
 # git
-<leader>gb - open blame window
-<leader>go - open file in git repo
-
-# nvim-tree
-<leader>p - toggle nvim tree
-<leader>v - open nvim tree with cursor on current file
-<leader>x - collapse nvim-tree recursively
-# in nvim-tree
-g? - help
-u - go up a directory
-I - toggle git ignored files
-H - toggle dotfiles
-R - refresh
-x - cut file/folder
-p - paste file/folder
-a - add file
-d - remove
-r - rename
-<C-v> - vsplit
-<C-x> - split
+gb - open blame window
+go - open file in git repo
 
 # LazyGit
 <leader>gg - open up lazygit
-
-# rails.vim
-gf - easy navigation
-:A - alternate files
-:R - go to related files
-:Emodel - go to model
-:Eview - go to view
-:Econtroller - go to controller
-:Rails console - opens up rails console
-:Generate controller foo - generate controller foo
-:Runner - wraps rails runner
-:Rails - runs the current test, spec or feature
-:.Rails - same as above but for the current line only
 
 # vim-bundler
 :Bundle - wraps bundle
@@ -300,21 +270,20 @@ grr - replace entire line without losing buffer
 gr (visual mode) - replace selection without losing buffer
 
 # telescope
-<C-p> - search git files
-sf - search all files
-sr - live ripgrep
-\\ - show buffers
-<leader>e - diagnostics
-<leader>t - help tags
+<leader>space - search git files
+<leader>fP - find plugins
+;f - Lists files in your current working directory, respects .gitignore
+;r - Search for a string in your current working directory and get results live as you type, respects .gitignore
+\\ - list open buffers
+;t - Lists available help tags and opens a new window with the relevant help info on <cr>
+;; - Resume the previous telescope picker
+;e - Lists Diagnostics for all open buffers or a specific buffer
+;s - Lists Function names, variables, from Treesitter
+sf - Open File Browser with the path of the current buffer
 
 # lspconfig
-[d - go to previous diagnostic
-]d - go to next diagnostic
-<leader>q - add buffer diagnostics to location list
-gd - jumps to definition of symbol under cursor
+<leadnr>cr - renames all references to symbol under cursor
 K - displays info about symbol under cursor
-<leader>rn - renames all references to symbol under cursor
-<leader>f - format code
 
 # comment
 gcc - comment line
@@ -338,16 +307,16 @@ S<p> - in visual mode (pressing V) wraps entire line between <p></p>
 [q - :cprevious
 ]a - :next
 [b - :bprevious
-[<Space> - add newline before the cursor line 
-]<Space> add newlines after the cursor line 
-[e - exchange the current line with the one above 
+[<Space> - add newline before the cursor line
+]<Space> add newlines after the cursor line
+[e - exchange the current line with the one above
 ]e - exchange the current line with the one below
-[os - :set spell 
+[os - :set spell
 ]os - :set nospell
 yos - :set invspell
 [x - encode XML
 ]x decode XML (and HTML)
-[u - encode URLs 
+[u - encode URLs
 ]u decode URLs
 [f - go to next file in the directory
 ]f - go to the previous file in the directory
@@ -398,9 +367,9 @@ ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
 <summary>Expand</summary>
 
 ### Configuration
-  
+
 Create ssh key and add to agent.
-  
+
 ```
 ssh-keygen -t rsa # generate a new key if needed
 ssh-add # add key to agent
