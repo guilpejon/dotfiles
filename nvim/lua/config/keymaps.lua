@@ -17,6 +17,9 @@ keymap.set("n", "-", "<C-x>")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- Clear selection
+keymap.set("n", "<C-L>", ":nohl<Return>")
+
 -- Disable continuations
 keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
 keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
