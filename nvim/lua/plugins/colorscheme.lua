@@ -1,5 +1,12 @@
 return {
+  -- { "ellisonleao/gruvbox.nvim" },
+  { "EdenEast/nightfox.nvim" },
+
+  -- Configure LazyVim to load the desired theme
   {
-    "EdenEast/nightfox.nvim",
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "nordfox",
+    },
   },
 }

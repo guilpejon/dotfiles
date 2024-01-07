@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local discipline = require("guilpejon.discipline")
+discipline.cowboy()
+
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -83,12 +86,9 @@ keymap.set("n", "<tab><down>", "<C-w>-")
 -- Map ,, to open last file
 keymap.set("n", ",,", "<C-^>")
 
---
 -- PLUGINS KEYMAPS
---
 
 -- open neotree
 keymap.set("n", "<Leader>p", ":Neotree toggle<CR>", opts)
-
 -- open lazygit
 keymap.set("n", "<Leader>gg", ":LazyGit<CR>", opts)
