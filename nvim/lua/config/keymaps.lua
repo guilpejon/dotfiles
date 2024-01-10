@@ -89,6 +89,3 @@ keymap.set("n", ",,", "<C-^>")
 
 -- open neotree
 keymap.set("n", "<Leader>p", ":Neotree toggle<CR>", opts)
-
--- open lazygit
-keymap.set("n", "<Leader>gg", ":LazyGit<CR>", opts)
