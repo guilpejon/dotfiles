@@ -226,6 +226,8 @@ alias ctags >> ~/.bashrc
 
 gem install gem-ctags
 gem ctags # in a rails project folder
+
+ctags -R * # run ctags manually in a project
 ```
 
 ### Configuration
@@ -259,29 +261,17 @@ gb - open blame window
 go - open file in git repo
 
 # LazyGit
-<leader>gg - open up lazygit
-
-# vim-bundler
-:Bundle - wraps bundle
-:Bundle open - opens a gem inside vim
-
-# ReplaceWithRegister
-grr - replace entire line without losing buffer
-gr (visual mode) - replace selection without losing buffer
+<leader>gg - open lazygit
 
 # telescope
-<leader>space - search git files
-<leader>fP - find plugins
-;f - Lists files in your current working directory, respects .gitignore
-;r - Search for a string in your current working directory and get results live as you type, respects .gitignore
+<C>p - search git files
+<leader>f - find files
+sr - live grep
+sc - Search for string under cursor
 \\ - list open buffers
-;t - Lists available help tags and opens a new window with the relevant help info on <cr>
-;; - Resume the previous telescope picker
-;e - Lists Diagnostics for all open buffers or a specific buffer
-;s - Lists Function names, variables, from Treesitter
-sf - Open File Browser with the path of the current buffer
 
 # lspconfig
+gr - LSP search word under cursor
 <leadnr>cr - renames all references to symbol under cursor
 K - displays info about symbol under cursor
 
@@ -298,9 +288,6 @@ ysiw[ - turns "Hello world!" to "[ Hello ] World" when cursor is in "Hello"
 yss) - wraps entire line between (...)
 yss( - wraps entire line between ( ... )
 S<p> - in visual mode (pressing V) wraps entire line between <p></p>
-
-# zenmode
-<leader>zz - toggle zenmode
 
 # vim-unimpaired
 ]q - :cnext
@@ -321,11 +308,6 @@ yos - :set invspell
 [f - go to next file in the directory
 ]f - go to the previous file in the directory
 
-# cellular-automaton
-<leader>fml - make it rain
-
-# maximizer
-<leader>sm - toggle split window maximization
 ```
 
 </details>
