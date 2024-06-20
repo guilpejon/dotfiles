@@ -269,6 +269,7 @@ go - open file in git repo
 sr - live grep
 sc - Search for string under cursor
 \\ - list open buffers
+C-f - refine fuzzy search
 
 # lspconfig
 gr - LSP search word under cursor

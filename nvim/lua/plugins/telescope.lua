@@ -21,6 +21,7 @@ return {
           builtin.find_files({ no_ignore = false, hidden = true })
         end,
       },
+      -- { "<leader>ff", ":Telescope find_files cwd=", desc = "Find Files In" },
       { "sr", builtin.live_grep },
       { "\\\\", builtin.buffers },
       { "<Leader>t", builtin.help_tags },
@@ -38,6 +39,11 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        mappings = {
+          i = {
+            ["<C-f>"] = require("telescope.actions").to_fuzzy_refine,
+          },
+        },
       },
     },
   },
