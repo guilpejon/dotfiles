@@ -44,6 +44,9 @@ return {
       ]]
 
       logo = string.rep("\n", 8) .. logo .. "\n\n"
+
+      -- Ensure `opts.config` exists and assign the header
+      opts.config = opts.config or {}
       opts.config.header = vim.split(logo, "\n")
     end,
   },
