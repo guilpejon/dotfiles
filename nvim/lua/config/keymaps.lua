@@ -96,3 +96,6 @@ keymap.set("i", "<M-.>", "<Plug>(copilot-next)", { silent = true })
 keymap.set("i", ",M-,>", "<Plug>(copilot-previous)", { silent = true })
 -- keymap.set("i", "<M-.>", "copilot#Next()", { expr = true, silent = true })
 -- keymap.set("i", "<M-,>", "copilot#Previous()", { expr = true, silent = true })
+
+-- gen AI
+vim.keymap.set({ "n", "v" }, "<leader>]", ":Gen<CR>")

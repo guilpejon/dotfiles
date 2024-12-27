@@ -315,6 +315,18 @@ yos - :set invspell
 [f - go to next file in the directory
 ]f - go to the previous file in the directory
 
+# copilot
+<Tab>" - copilot accept suggestion
+<M-]> - copilot next suggestion
+<M-[> - copilot previous suggestion
+<M-/> - toggle copilt suggestion
+
+# copilot-chat
+<leader>aa - start_chat
+<leader>cs - send_message
+
+# gen
+<leader>] - start gen AI (need to run ollama run mistral first)
 ```
 
 </details>
