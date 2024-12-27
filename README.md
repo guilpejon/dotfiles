@@ -242,7 +242,13 @@ ln -s ~/.dotfiles/nvim ~/.config/nvim
 
 ```
 <space> - leader
+<leader>s - find and replace all under cursor
+
+# tabs
 te - tab edit
+<tab> - go to next tab
+<S-tab> - go to previous tab
+tw - close tabclose tab
 
 # splits
 ss - split horizontally

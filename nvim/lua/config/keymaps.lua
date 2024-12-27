@@ -5,6 +5,7 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
 -- Increment/decrement
@@ -12,7 +13,7 @@ keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Select all
--- keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Clear selection
 keymap.set("n", "<C-L>", ":nohl<Return>")
@@ -28,6 +29,8 @@ keymap.set("n", "<C-m>", "<C-i>", opts)
 keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "tw", ":tabclose<Return>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
@@ -49,9 +52,6 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- keep cursor on the middle while using n and N while searching
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
-
--- delete single character without copying into register
-keymap.set("n", "x", '"_x')
 
 -- change Q to ident
 keymap.set("n", "Q", "=ap")
@@ -89,3 +89,10 @@ keymap.set("n", ",,", "<C-^>")
 
 -- open neotree
 keymap.set("n", "<Leader>p", ":Neotree toggle<CR>", opts)
+
+-- Copilot Next suggestion
+keymap.set("i", "<M-.>", "<Plug>(copilot-next)", { silent = true })
+-- Copilot Previous suggestion
+keymap.set("i", ",M-,>", "<Plug>(copilot-previous)", { silent = true })
+-- keymap.set("i", "<M-.>", "copilot#Next()", { expr = true, silent = true })
+-- keymap.set("i", "<M-,>", "copilot#Previous()", { expr = true, silent = true })

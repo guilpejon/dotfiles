@@ -8,11 +8,8 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
-    -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- Import custom plugins
     { import = "config.plugins" },
-    -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
@@ -21,9 +18,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.ai.copilot" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
-    -- import/override with your plugins
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     { import = "plugins" },
   },
   defaults = {

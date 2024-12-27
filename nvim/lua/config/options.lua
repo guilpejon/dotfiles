@@ -4,7 +4,7 @@
 
 local opt = vim.opt
 
--- vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 vim.scriptencoding = "utf-8"
 opt.encoding = "utf-8"
@@ -44,6 +44,7 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
+opt.splitkeep = "cursor"
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 
@@ -64,8 +65,8 @@ opt.undofile = true
 
 opt.title = true
 opt.showcmd = true
-opt.cmdheight = 1
-opt.laststatus = 2
+opt.cmdheight = 0 --1
+opt.laststatus = 0 --2
 opt.shell = "zsh"
 opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 opt.inccommand = "split"
@@ -73,8 +74,7 @@ opt.smarttab = true
 opt.breakindent = true
 opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 opt.wildignore:append({ "*/node_modules/*" })
-opt.splitkeep = "cursor"
--- opt.mouse = "" -- disable mouse
+opt.mouse = "" -- disable mouse
 
 -- Add asterisks in block comments
 opt.formatoptions:append({ "r" })
