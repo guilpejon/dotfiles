@@ -380,9 +380,17 @@ Create symlink to configuration files.
 
 ```
 ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
-
-# IMPORTANT: Remember to add your name and email to the ~/.gitconfig file
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
+```
+
+Create `~/.gitconfig.local` with your personal details (this file is intentionally kept outside the repo):
+
+```
+cat > ~/.gitconfig.local << 'EOF'
+[user]
+	name = Your Name
+	email = your@email.com
+EOF
 ```
 
 </details>

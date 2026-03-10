@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = <YOUR NAME>
-	email = <YOUR EMAIL>
+[include]
+	path = ~/.gitconfig.local
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
