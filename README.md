@@ -58,6 +58,15 @@ brew install rg fd
 brew install yarn npm wget watch
 brew install gpg
 brew install --cask ngrok
+brew install --cask rectangle
+```
+
+---
+
+## Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
 ```
 
 ---
