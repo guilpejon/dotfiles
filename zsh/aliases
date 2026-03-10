@@ -5,9 +5,11 @@ alias vim='nvim'
 alias :q='exit'
 
 # rust terminal tools
-alias ls="exa -la --icons"
+alias ls="eza -la --icons --git"
+alias ll="eza -l --icons --git"
+alias lt="eza --tree --icons --git-ignore"
 alias cat="bat --style=auto"
-alias top="ytop"
+alias top="btop"
 
 # git
 alias merge='merge --no-edit'
@@ -21,6 +23,20 @@ alias gap='git add -p'
 alias gd='git diff'
 alias gb='git branch -v'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
+alias gst='git stash'
+alias gstp='git stash pop'
+alias grbi='git rebase -i'
+alias gcp='git cherry-pick'
+alias gwip='git add -A && git commit -m "WIP"'
+alias gunwip='git reset HEAD~1'
+
+# Rails
+alias be='bundle exec'
+alias bec='bundle exec rails console'
+alias bes='bundle exec rails server'
+alias bedb='bundle exec rails db:migrate'
+alias bedbs='bundle exec rails db:migrate:status'
+alias bert='bundle exec rspec'
 
 # docker
 alias docker-clean=' \
@@ -28,6 +44,9 @@ alias docker-clean=' \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
+
+# ctags
+alias ctags="`brew --prefix`/bin/ctags"
 
 # k8s
 alias k=kubectl

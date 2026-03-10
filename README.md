@@ -1,412 +1,265 @@
 # Guil's Dotfiles
 
-Personalized Dotfiles for MacOS.
+Personal MacOS dotfiles. Configs are applied via symlinks — edits here take effect immediately.
 
-## Installation
+## Setup
 
-Clone this repo to your home folder.
-
-```
+```bash
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
-Expand the sections below as you wish to learn how to install and configure them.
+Then create symlinks:
 
-## MacOS
-
-<details>
-<summary>Expand</summary>
-
-### Install
-
-Install Rosetta 2 and xcode if this is a new M1 machine.
-
-```
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
-
-xcode-select --install
+```bash
+ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
+ln -s ~/.dotfiles/nvim ~/.config/nvim
+ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
+ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
+ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
 
-### Configure
+Add to `~/.zshrc`:
 
-```
-# Enable keystroke repetition while holding a key
-defaults write -g ApplePressAndHoldEnabled -bool false
-```
-
-</details>
-
-## Brew
-
-<details>
-<summary>Expand</summary>
-
-### Installation
-
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-```
-
-</details>
-
-## Apps
-
-<details>
-<summary>Expand</summary>
-
-```
-brew install slack
-brew install spotify
-brew install notion
-brew install telegram
-brew install whatsapp
-brew install 1password
-```
-
-</details>
-
-## Dev tools
-
-<details>
-<summary>Expand</summary>
-
-```
-curl https://sh.rustup.rs -sSf | sh # install cargo
-cargo install bat exa tokei ytop tealdeer grex zoxide git-delta
-
-brew install yarn
-brew install npm
-brew install tree
-brew install watch
-brew install wget
-brew install wireguard-tools
-brew install gh
-brew install flyctl
-brew install redis
-brew install postgresql
-brew install ansible
-brew install gpg
-brew install keybase
-brew install tmate
-
-brew install cask
-brew install --cask ngrok
-
-brew install lazygit
-
-# to enable k8s terminal helper functions
-brew install fzf jq
-```
-
-</details>
-
-## iTerm2
-
-<details>
-<summary>Expand</summary>
-
-### Installation
-
-```
-brew install iterm2
-```
-
-### Configuration
-
-Use [this article](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x) to configure word jumps wih arrow keys.
-
-Set "Reuse previous session's directory" in "Working Directory".
-
-![image](https://user-images.githubusercontent.com/871362/211964181-627f0374-c882-4cf3-901a-eba63ffa5d4a.png)
-
-Add one of the themes from the `iterm/` folder to iTerm2 by following [these steps](https://iterm2colorschemes.com/).
-
-```
-“Command” + “Shift” + “.” - show hidden folders in finder
-```
-
-</details>
-
-## zsh
-
-<details>
-<summary>Expand</summary>
-
-### Installation
-
-Install zsh and a few plugins, including powerlevel10k.
-
-```
-brew install zsh
-mkdir ~/.zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-
-brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
-```
-
-### Configuration
-
-Add these lines to your `~/.zshrc`.
-
-```
-# ~/.zshrc
-
+```bash
 source ~/.dotfiles/zsh/functions
 source ~/.dotfiles/zsh/aliases
 source ~/.dotfiles/zsh/configurations
 ```
 
-### Shortcuts
+---
 
+## MacOS
+
+```bash
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license  # M1 only
+xcode-select --install
+defaults write -g ApplePressAndHoldEnabled -bool false  # enable key repeat
 ```
-# vim
-vim='nvim'
-:q='exit'
 
-# rust terminal tools
-ls="exa -la --icons"
-cat="bat --style=auto"
-top="ytop"
+---
+
+## Brew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
+
+---
+
+## Dev Tools
+
+```bash
+brew install eza btop bat zoxide git-delta lazygit
+brew install fzf jq gh
+brew install rg fd
+brew install yarn npm wget watch
+brew install gpg
+brew install --cask ngrok
+```
+
+---
+
+## iTerm2
+
+```bash
+brew install iterm2
+```
+
+- Use `iterm/` folder to import a color theme (Dracula or GruvboxDark)
+- Set "Reuse previous session's directory" in Preferences → Profiles → Working Directory
+- `Cmd+Shift+.` — show hidden files in Finder
+
+---
+
+## zsh
+
+```bash
+brew install zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+brew install romkatv/powerlevel10k/powerlevel10k
+```
+
+### Aliases
+
+```bash
+# vim
+vim          → nvim
+:q           → exit
+
+# terminal tools
+ls           → eza -la --icons --git
+ll           → eza -l --icons --git
+lt           → eza --tree --icons --git-ignore
+cat          → bat --style=auto
+top          → btop
 
 # git
-merge='merge --no-edit'
-gs='git status'
-gco='git checkout'
-gcm='git commit -m'
-gps='git push'
-gpl='git pull'
-ga='git add -A'
-gap='git add -p'
-gd='git diff'
-gb='git branch -v'
-glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit"
+gs           → git status
+gco          → git checkout
+gcm          → git commit -m
+gps          → git push
+gpl          → git pull
+ga           → git add -A
+gap          → git add -p
+gd           → git diff
+gb           → git branch -v
+glog         → git log (pretty graph)
+gst          → git stash
+gstp         → git stash pop
+grbi         → git rebase -i
+gcp          → git cherry-pick
+gwip         → git add -A && git commit -m "WIP"
+gunwip       → git reset HEAD~1
+
+# Rails
+be           → bundle exec
+bec          → bundle exec rails console
+bes          → bundle exec rails server
+bedb         → bundle exec rails db:migrate
+bedbs        → bundle exec rails db:migrate:status
+bert         → bundle exec rspec
 
 # docker
-docker-clean=' \
-  docker container prune -f ; \
-  docker image prune -f ; \
-  docker network prune -f ; \
-  docker volume prune -f '
+docker-clean → prune containers, images, networks, volumes
 
 # k8s
-k=kubectl
-kgp='k get pods'
-kdp='k delete pod'
-kswitch_ns='kubectl config set-context --current --namespace $(fz_namespace)'
-kswitch_ctx='kubectl config use-context $(fz_context)'
-kshell='kubectl exec $* -it $(fz_podname $*) -- sh'
-kbash='kubectl exec $* -it $(fz_podname $*) -- bash'
-klogs='kubectl logs $* -f $(fz_podname $*)'
+k            → kubectl
+kgp          → k get pods
+kdp          → k delete pod
+kswitch_ns   → switch namespace (fzf)
+kswitch_ctx  → switch context (fzf)
+kshell       → exec into pod shell (fzf)
+kbash        → exec into pod bash (fzf)
+klogs        → tail pod logs (fzf)
 ```
 
-</details>
+---
 
 ## Neovim
 
-<details>
-<summary>Expand</summary>
-
-### Installation
-
-```
+```bash
 brew install neovim
 ```
 
-Install [rg](https://github.com/BurntSushi/ripgrep), [fd](https://github.com/sharkdp/fd) linters, lsps and ctags.
+Uses [LazyVim](https://lazyvim.github.io). Run `:Lazy` inside Neovim to manage plugins.
+
+### Keymaps
 
 ```
-brew install rg fd
+<space>       leader
 
-brew install ctags
-alias ctags="`brew --prefix`/bin/ctags"
-alias ctags >> ~/.bashrc
-
-gem install gem-ctags
-gem ctags # in a rails project folder
-
-ctags -R * # run ctags manually in a project
-```
-
-### Configuration
-
-Create a symbolic link with the config folder.
-
-```
-ln -s ~/.dotfiles/nvim ~/.config/nvim
-```
-
-### Shortcuts
-
-```
-<space> - leader
-<leader>s - find and replace all under cursor
+# navigation
+<C-d/u>       scroll half page, cursor stays centered
+n / N         search next/prev, cursor stays centered
+,,            switch to last file
+<S-arrow>     move between splits
+<tab-arrow>   resize splits
 
 # tabs
-te - tab edit
-<tab> - go to next tab
-<S-tab> - go to previous tab
-tw - close tabclose tab
+te            new tab
+<tab>         next tab
+<S-tab>       prev tab
+tw            close tab
 
 # splits
-ss - split horizontally
-sv - split vertically
-sh or <S-LEFT> - move left
-sk or <S-UP> - move up
-sj or <S-DOWN> - move down
-sl or <S-RIGHT> - move right
-<tab-left> - reduce size horizontally
-<tab-right> - increase size horizontally
-<tab-up> - increase size vertically
-<tab-down> - reduce size vertically
+ss            split horizontal
+sv            split vertical
+
+# editing
+x             delete char (no register)
+Q             indent paragraph
+<leader>s     find & replace word under cursor
+<leader>m     toggle split/join block (treesj — great for JSON)
+
+# file tree
+<leader>p     toggle NeoTree
+  ○           unstaged changes
+  ●           staged
+              new file
+              modified
+  ✖           deleted
+  ?           untracked
 
 # git
-gb - open blame window
-go - open file in git repo
-
-# LazyGit
-<leader>gg - open lazygit
+gb            git blame
+go            open file in browser
+<leader>gg    open lazygit
 
 # telescope
-<C>p - search git files
-<leader>f - find files
-sr - live grep
-sc - Search for string under cursor
-\\ - list open buffers
-C-f - refine fuzzy search
+<C-p>         search git files
+<leader>f     find files
+sr            live grep
+sc            search word under cursor
+\\            list open buffers
 
-# lspconfig
-gr - LSP search word under cursor
-<leadnr>cr - renames all references to symbol under cursor
-K - displays info about symbol under cursor
+# LSP
+gr            find references
+<leader>cr    rename symbol
+K             hover docs
+<C-j>         next diagnostic
 
-# comment
-gcc - comment line
-gc (in visual mode selection) - comment block
+# comments
+gcc           comment line
+gc            comment selection (visual)
 
 # vim-surround
-cs"' - change text between "" to ''
-cst" - change text between tags (e.g. <div>) to "
-ds" - remove "" surrounding a text
-ysiw] - turns "Hello world!" to "[Hello] World" when cursor is in "Hello"
-ysiw[ - turns "Hello world!" to "[ Hello ] World" when cursor is in "Hello"
-yss) - wraps entire line between (...)
-yss( - wraps entire line between ( ... )
-S<p> - in visual mode (pressing V) wraps entire line between <p></p>
+cs"'          change "" to ''
+cst"          change tag to "
+ds"           delete surrounding "
+ysiw]         wrap word in []
+yss)          wrap line in ()
+S<p>          wrap visual selection in <p> (visual line)
 
-# vim-unimpaired
-]q - :cnext
-[q - :cprevious
-]a - :next
-[b - :bprevious
-[<Space> - add newline before the cursor line
-]<Space> add newlines after the cursor line
-[e - exchange the current line with the one above
-]e - exchange the current line with the one below
-[os - :set spell
-]os - :set nospell
-yos - :set invspell
-[x - encode XML
-]x decode XML (and HTML)
-[u - encode URLs
-]u decode URLs
-[f - go to next file in the directory
-]f - go to the previous file in the directory
+# testing (neotest)
+<leader>tr    run nearest test
+<leader>tf    run all tests in file
+<leader>ts    toggle test summary panel
+<leader>to    open test output
 
-# copilot
-<Tab>" - copilot accept suggestion
-<M-]> - copilot next suggestion
-<M-[> - copilot previous suggestion
-<M-/> - toggle copilt suggestion
-
-# copilot-chat
-<leader>aa - start_chat
-<leader>cs - send_message
-
-# gen
-<leader>] - start gen AI (need to run ollama run mistral first)
+# AI (gen.nvim — local Ollama fallback)
+<leader>]     open gen prompt
 ```
 
-</details>
-
-## asdf
-
-<details>
-<summary>Expand</summary>
-
-### Installation
-
-```
-brew install asdf
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
-```
-
-#### Plugins
-
-```
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin-add python
-```
-
-### Configuration
-
-Create symlink to configuration file.
-
-```
-ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
-```
-
-</details>
+---
 
 ## Git
 
-<details>
-<summary>Expand</summary>
-
-### Configuration
-
-Create ssh key and add to agent.
-
-```
-ssh-keygen -t rsa # generate a new key if needed
-ssh-add # add key to agent
+```bash
+ssh-keygen -t rsa
+ssh-add
 ```
 
-Create symlink to configuration files.
+Create `~/.gitconfig.local` (kept outside repo):
 
 ```
-ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
-ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-```
-
-Create `~/.gitconfig.local` with your personal details (this file is intentionally kept outside the repo):
-
-```
-cat > ~/.gitconfig.local << 'EOF'
 [user]
-	name = Your Name
-	email = your@email.com
-EOF
+    name = Your Name
+    email = your@email.com
 ```
 
-</details>
+Notable config: delta pager with side-by-side diffs, rebase on pull, auto-prune remotes, rerere enabled.
+
+---
+
+## asdf
+
+```bash
+brew install asdf
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.zshrc
+
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin-add python
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+```
+
+---
 
 ## Rails
 
-<details>
-<summary>Expand</summary>
-
-### Configuration
-
-Create symlink to configuration files.
-
-```
+```bash
 ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
 ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
-
-</details>

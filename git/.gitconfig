@@ -13,8 +13,16 @@
 	whitespace = fix
 [branch]
 	sort = -committerdate
+[init]
+	defaultBranch = main
 [pull]
-	ff = only
+	rebase = true
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
 [interactive]
 	diffFilter = delta --color-only
 [delta]

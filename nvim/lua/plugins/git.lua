@@ -1,14 +1,12 @@
-local git = require("git")
-
 return {
-  git.setup({
-    keymaps = {
-      -- Open blame window
-      blame = "gb",
-      -- Open file/folder in git repository
-      browse = "go",
-      -- Open LazyGit
-      open_lazygit = "<leader>gg",
+  {
+    "dinhhuy258/git.nvim",
+    opts = {
+      keymaps = {
+        blame = "gb",
+        browse = "go",
+        open_lazygit = "<leader>gg",
+      },
     },
-  }),
+  },
 }

@@ -90,12 +90,5 @@ keymap.set("n", ",,", "<C-^>")
 -- open neotree
 keymap.set("n", "<Leader>p", ":Neotree toggle<CR>", opts)
 
--- Copilot Next suggestion
-keymap.set("i", "<M-.>", "<Plug>(copilot-next)", { silent = true })
--- Copilot Previous suggestion
-keymap.set("i", ",M-,>", "<Plug>(copilot-previous)", { silent = true })
--- keymap.set("i", "<M-.>", "copilot#Next()", { expr = true, silent = true })
--- keymap.set("i", "<M-,>", "copilot#Previous()", { expr = true, silent = true })
-
 -- gen AI
 vim.keymap.set({ "n", "v" }, "<leader>]", ":Gen<CR>")

@@ -30,6 +30,16 @@ return {
     "tpope/vim-surround",
   },
 
+  -- Split/join blocks (great for JSON/n8n workflows)
+  {
+    "Wansmer/treesj",
+    keys = {
+      { "<leader>m", function() require("treesj").toggle() end, desc = "Toggle split/join block" },
+    },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = { use_default_keymaps = false },
+  },
+
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",

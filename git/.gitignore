@@ -46,3 +46,14 @@ Session.vim
 # SASS
 # ----------------------------------------------------------------------------------------------
 .sass-cache
+
+# Secrets and local env files
+.env
+.env.local
+.env*.local
+.claude/settings.local.json
+
+# Dependencies
+node_modules/
+.bundle/
+vendor/bundle/
