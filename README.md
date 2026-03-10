@@ -14,6 +14,7 @@ Then create symlinks:
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/nvim ~/.config/nvim
+ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
 ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
 ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
@@ -61,15 +62,14 @@ brew install --cask ngrok
 
 ---
 
-## iTerm2
+## Ghostty
 
 ```bash
-brew install iterm2
+brew install --cask ghostty
+ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 ```
 
-- Use `iterm/` folder to import a color theme (Dracula or GruvboxDark)
-- Set "Reuse previous session's directory" in Preferences → Profiles → Working Directory
-- `Cmd+Shift+.` — show hidden files in Finder
+`term = xterm-256color` is set in the config so SSH sessions show colors correctly on remote machines.
 
 ---
 
@@ -77,8 +77,13 @@ brew install iterm2
 
 ```bash
 brew install zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
+
+# terminal autocomplete (suggestions + syntax highlighting)
+brew install zsh-autosuggestions zsh-syntax-highlighting
+echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 ```
 
 ### Aliases

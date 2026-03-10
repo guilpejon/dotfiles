@@ -1,0 +1,5 @@
+window-inherit-working-directory = true
+
+# Use xterm-256color so remote machines recognize the terminal over SSH
+# (prevents white-only text when SSHing into servers)
+term = xterm-256color
