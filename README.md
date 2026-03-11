@@ -63,6 +63,15 @@ brew install --cask rectangle
 
 ---
 
+## Mac Apps
+
+```bash
+brew install --cask whatsapp
+brew install --cask arc
+```
+
+---
+
 ## Claude Code
 
 ```bash
