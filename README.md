@@ -18,10 +18,14 @@ mkdir -p ~/.config/ghostty
 Then create symlinks:
 
 ```bash
+# Git
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
+# VIM
 ln -s ~/.dotfiles/nvim ~/.config/nvim
+# Terminal
 ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
+# Rails
 ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
 ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
@@ -276,13 +280,4 @@ S<p>          wrap visual selection in <p> (visual line)
 
 # AI (gen.nvim — local Ollama fallback)
 <leader>]     open gen prompt
-```
-
----
-
-## Rails
-
-```bash
-ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
-ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
