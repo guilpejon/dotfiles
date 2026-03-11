@@ -91,8 +91,8 @@ Notable config: delta pager with side-by-side diffs, rebase on pull, auto-prune 
 
 ```bash
 brew install zsh
-brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
+brew install powerlevel10k
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc
 
 # terminal autocomplete (suggestions + syntax highlighting)
 brew install zsh-autosuggestions zsh-syntax-highlighting
