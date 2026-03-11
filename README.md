@@ -11,8 +11,6 @@ git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 Then create symlinks:
 
 ```bash
-ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
@@ -250,11 +248,24 @@ S<p>          wrap visual selection in <p> (visual line)
 ## Git
 
 ```bash
+brew install git gh
+```
+
+```bash
 ssh-keygen -t rsa
 ssh-add
 ```
 
-Create `~/.gitconfig.local` (kept outside repo):
+Add the public key to GitHub: copy `~/.ssh/id_rsa.pub` and paste it at github.com → Settings → SSH keys.
+
+Symlink the global git config and ignore files:
+
+```bash
+ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
+```
+
+Create `~/.gitconfig.local` (kept outside repo) with your identity:
 
 ```
 [user]
