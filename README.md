@@ -27,7 +27,7 @@ ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
 ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
 
-Add to `~/.zshrc`:
+Add to `~/.zshrc` (run these after completing the Dev Tools step):
 
 ```bash
 source ~/.dotfiles/zsh/functions
@@ -77,10 +77,12 @@ Add the public key to GitHub: copy `~/.ssh/id_rsa.pub` and paste it at github.co
 
 Clone the dotfiles repo and create all symlinks (see [Setup](#setup)), then create `~/.gitconfig.local` (kept outside repo) with your identity:
 
-```
+```bash
+cat > ~/.gitconfig.local << 'EOF'
 [user]
     name = Your Name
     email = your@email.com
+EOF
 ```
 
 Notable config: delta pager with side-by-side diffs, rebase on pull, auto-prune remotes, rerere enabled.
