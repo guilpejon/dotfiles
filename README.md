@@ -103,12 +103,7 @@ echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlight
 ### 6. Dev Tools
 
 ```bash
-brew install eza btop bat zoxide git-delta lazygit
-brew install fzf jq
-brew install rg fd
-brew install yarn npm wget watch
-brew install gpg
-brew install --cask ngrok
+brew install eza btop bat zoxide git-delta lazygit fzf jq rg fd wget watch gpg
 brew install --cask rectangle
 ```
 
