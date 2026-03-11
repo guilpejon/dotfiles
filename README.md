@@ -22,7 +22,6 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
-ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
 ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
 ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
@@ -122,16 +121,20 @@ brew install neovim
 
 Uses [LazyVim](https://lazyvim.github.io). Run `:Lazy` inside Neovim to manage plugins.
 
-### 9. asdf
+### 9. mise
 
 ```bash
-brew install asdf
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ~/.zshrc
+brew install mise
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+```
 
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin-add python
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+Reads `.ruby-version`, `.nvmrc`, `.python-version` etc. natively. To install language versions:
+
+```bash
+mise use --global ruby@latest
+mise use --global node@latest
+mise use --global python@latest
+mise use --global go@latest
 ```
 
 ### 10. Claude Code

@@ -14,7 +14,6 @@ Configurations are symlinked, so edits here take effect immediately. The symlink
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/nvim ~/.config/nvim
-ln -s ~/.dotfiles/asdf/.asdfrc ~/.asdfrc
 ln -s ~/.dotfiles/rails/.railsrc ~/.railsrc
 ln -s ~/.dotfiles/rails/.gemrc ~/.gemrc
 ```
@@ -31,7 +30,7 @@ source ~/.dotfiles/zsh/configurations
 - **nvim/** — Neovim config using LazyVim framework. Entry point: `init.lua`. Plugin manager bootstrap in `lua/config/lazy.lua`. Custom plugins in `lua/plugins/`.
 - **zsh/** — Shell aliases, functions (Kubernetes helpers using fzf), and history/autocomplete settings.
 - **git/** — Global `.gitconfig` (delta pager, rebase ff-only, GPG signing, neovim as editor) and `.gitignore`.
-- **asdf/** — `.asdfrc` enabling legacy version file support (`.ruby-version`, etc.).
+- **mise/** — no config file needed; mise reads `.ruby-version`, `.nvmrc`, etc. natively.
 - **rails/** — `.railsrc` (PostgreSQL default, skips unwanted generators) and `.gemrc` (no docs).
 - **iterm/** — Dracula and GruvboxDark color theme files for iTerm2 import.
 
@@ -48,7 +47,7 @@ The Neovim config uses **LazyVim** as the base framework with these key customiz
 
 ## Key Tool Versions
 
-Languages managed via **asdf** with plugins for Ruby, Node.js, Python, and Go. The `.asdfrc` enables legacy version files so `.ruby-version` etc. are respected.
+Languages managed via **mise** for Ruby, Node.js, Python, and Go. Legacy version files (`.ruby-version`, `.nvmrc`, etc.) are read natively.
 
 ## Git Configuration Notes
 
