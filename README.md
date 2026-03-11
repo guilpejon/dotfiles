@@ -35,9 +35,8 @@ source ~/.dotfiles/zsh/configurations
 ### 1. MacOS
 
 ```bash
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license  # M1 only
-xcode-select --install
-defaults write -g ApplePressAndHoldEnabled -bool false  # enable key repeat
+# enable key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
 ### 2. Homebrew
