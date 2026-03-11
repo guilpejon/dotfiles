@@ -8,6 +8,13 @@ Personal MacOS dotfiles. Configs are applied via symlinks — edits here take ef
 git clone git@github.com:guilpejon/dotfiles.git ~/.dotfiles
 ```
 
+Create required directories:
+
+```bash
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/ghostty
+```
+
 Then create symlinks:
 
 ```bash
@@ -46,7 +53,16 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 ```
 
-### 3. Git
+### 3. Ghostty
+
+```bash
+brew install --cask ghostty
+ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
+```
+
+`term = xterm-256color` is set in the config so SSH sessions show colors correctly on remote machines.
+
+### 4. Git
 
 ```bash
 brew install git gh
@@ -59,14 +75,7 @@ ssh-add
 
 Add the public key to GitHub: copy `~/.ssh/id_rsa.pub` and paste it at github.com → Settings → SSH keys.
 
-Symlink the global git config and ignore files:
-
-```bash
-ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/git/.gitignore ~/.gitignore
-```
-
-Create `~/.gitconfig.local` (kept outside repo) with your identity:
+Clone the dotfiles repo and create all symlinks (see [Setup](#setup)), then create `~/.gitconfig.local` (kept outside repo) with your identity:
 
 ```
 [user]
@@ -75,15 +84,6 @@ Create `~/.gitconfig.local` (kept outside repo) with your identity:
 ```
 
 Notable config: delta pager with side-by-side diffs, rebase on pull, auto-prune remotes, rerere enabled.
-
-### 4. Ghostty
-
-```bash
-brew install --cask ghostty
-ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
-```
-
-`term = xterm-256color` is set in the config so SSH sessions show colors correctly on remote machines.
 
 ### 5. zsh
 
