@@ -3,3 +3,9 @@ window-inherit-working-directory = true
 # Use xterm-256color so remote machines recognize the terminal over SSH
 # (prevents white-only text when SSHing into servers)
 term = xterm-256color
+
+# Move focus between splits with Ctrl + Option + Arrows
+keybind = ctrl+option+up=goto_split:up
+keybind = ctrl+option+down=goto_split:down
+keybind = ctrl+option+left=goto_split:left
+keybind = ctrl+option+right=goto_split:right
