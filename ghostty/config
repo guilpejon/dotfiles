@@ -5,7 +5,7 @@ window-inherit-working-directory = true
 term = xterm-256color
 
 # Move focus between splits with Ctrl + Option + Arrows
-keybind = ctrl+option+up=goto_split:up
-keybind = ctrl+option+down=goto_split:down
-keybind = ctrl+option+left=goto_split:left
-keybind = ctrl+option+right=goto_split:right
+keybind = option+up=goto_split:up
+keybind = option+down=goto_split:down
+keybind = option+left=goto_split:left
+keybind = option+right=goto_split:right
