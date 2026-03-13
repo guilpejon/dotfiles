@@ -4,8 +4,8 @@ window-inherit-working-directory = true
 # (prevents white-only text when SSHing into servers)
 term = xterm-256color
 
-# Move focus between splits with Ctrl + Option + Arrows
-keybind = option+up=goto_split:up
-keybind = option+down=goto_split:down
-keybind = option+left=goto_split:left
-keybind = option+right=goto_split:right
+# Move focus between splits with Option + Cmd + Arrows
+keybind = option+cmd+up=goto_split:up
+keybind = option+cmd+down=goto_split:down
+keybind = option+cmd+left=goto_split:left
+keybind = option+cmd+right=goto_split:right
