@@ -33,6 +33,7 @@ source ~/.dotfiles/zsh/configurations
 - **mise/** — no config file needed; mise reads `.ruby-version`, `.nvmrc`, etc. natively.
 - **rails/** — `.railsrc` (PostgreSQL default, skips unwanted generators) and `.gemrc` (no docs).
 - **iterm/** — Dracula and GruvboxDark color theme files for iTerm2 import.
+- **rectangle/** — Rectangle window manager preferences plist. Applied via `defaults import com.knollsoft.Rectangle ~/.dotfiles/rectangle/com.knollsoft.Rectangle.plist` (not a symlink — cfprefsd doesn't support symlinked plists).
 
 ## Neovim Architecture
 

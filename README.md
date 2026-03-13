@@ -110,6 +110,12 @@ brew install eza btop bat zoxide git-delta lazygit fzf jq rg fd wget watch gpg n
 brew install --cask rectangle
 ```
 
+Import Rectangle shortcuts:
+
+```bash
+defaults import com.knollsoft.Rectangle ~/.dotfiles/rectangle/com.knollsoft.Rectangle.plist
+```
+
 ### 7. Mac Apps
 
 ```bash
